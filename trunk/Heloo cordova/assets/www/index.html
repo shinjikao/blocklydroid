@@ -1,0 +1,88 @@
+<html>
+<head>
+<title>JAVASCRIPT CALCULATOR</title>
+<script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
+<meta name="Programmer" content="Randy Septian D. Putra" />
+<script language="javascript" type="<a title="text" href="http://www.randyseptian.web.id/2011/03/anchor-text/">text</a>/javascript">
+<!--
+  var flag = false;
+  function isi(num) {
+    if (flag) calc.b.value += num;
+    else calc.a.value += num;
+  }
+  function tambah()
+  {
+    calc.opr.value = ' + '
+    flag = true;
+    calc.b.focus()
+  }
+  function kurang()
+  {
+    calc.opr.value = ' - '
+    flag = true;
+    calc.b.focus()
+  }
+  function kosong()
+  {
+    calc.a.focus()
+    calc.a.value=""
+    calc.opr.value=""
+    calc.b.value=""
+    calc.c.value=""
+    flag = false;
+  }
+//-->
+</script>
+<style type="text/css">
+p {
+  font-family:verdana;
+  font-size:10px;
+  line-height:1.6em;
+  font-weight:bold;
+  color:#727272
+}
+</style>
+</head>
+<body onload=kosong()>
+<center>
+<p style="padding:20px 0px 30px 0px"><font size="6">JavaScript Calculator</font></p>
+<form name="calc">
+  <table border="4" bordercolor="#3333ff">
+    <tr>
+      <td>
+      <input type="text" name="a" size="2" />
+      <input type="text" name="opr" size="1" />
+      <input type="text" name="b" size="2" /> =
+      <input type="text" name="c" size="2" />
+      <br/>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      <input type="button" name="one"   value="  1  " onclick="isi(1)" />
+      <input type="button" name="two"   value="  2  " onclick="isi(2)" />
+      <input type="button" name="three" value="  3  " onclick="isi(3)" />
+      <input type="button" name="plus"  value="  +  " onclick="tambah()" />
+      <br/>
+      <input type="button" name="four"  value="  4  " onclick="isi(4)" />
+      <input type="button" name="five"  value="  5  " onclick="isi(5)" />
+      <input type="button" name="six"   value="  6  " onclick="isi(6)" />
+      <input type="button" name="minus" value="  -  " onclick="kurang()" />
+      <br/>
+      <input type="button" name="seven" value="  7  " onclick="isi(7)" />
+      <input type="button" name="eight" value="  8  " onclick="isi(8)" />
+      <input type="button" name="nine"  value="  9  " onclick="isi(9)" />
+      <br/>
+      <input type="button" name="clear" value="  c  " onclick="kosong()" />
+      <input type="button" name="zero"  value="  0  " onclick="isi(0)" />
+      <input type="button" name="DoIt"  value="  =  " onclick="calc.c.value=eval(calc.a.value+calc.opr.value+calc.b.value)" />
+      <br/>
+      </td>
+    </tr>
+  </table>
+</form>
+<p>Created by : <br/>Randy Septian Dewa Putra</p><hr/>
+<p>2009 &copy; RanTech Inc. All Rights Reserved.</p>
+</center>
+</body>
+</html>
